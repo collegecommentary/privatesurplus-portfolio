@@ -712,8 +712,8 @@
     }
 
     .gif-item {
-      background: #06070A;
-      border: 1px solid var(--line);
+      background: linear-gradient(160deg, #F2EEE6 0%, #E5DFD3 100%);
+      border: 1px solid #D7D1C4;
       border-radius: 12px;
       overflow: hidden;
     }
@@ -723,30 +723,17 @@
       height: 152px;
       object-fit: contain;
       display: block;
-      padding: 10px;
+      padding: 12px 14px 8px;
     }
 
     .gif-item p {
       font-size: 12px;
-      color: var(--muted);
+      font-weight: 600;
+      color: #4B463C;
+      background: rgba(255, 255, 255, 0.35);
       padding: 9px 12px;
-      border-top: 1px solid var(--line-soft);
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
       text-align: center;
-    }
-
-    .gif-slot {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      border: 1px dashed #303848;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.015);
-      font-size: 12px;
-      color: var(--muted-2);
-      height: 193px;
-      padding: 14px;
-      line-height: 1.6;
     }
 
     /* ---------- References ---------- */
@@ -1347,7 +1334,6 @@
       .high-involve { grid-template-columns: 1fr; }
       .gif-strip { grid-template-columns: 1fr; }
       .gif-item img { height: 190px; }
-      .gif-slot { height: 190px; }
       .client-list { grid-template-columns: 1fr; }
     }
 
