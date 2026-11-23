@@ -31,12 +31,23 @@
       font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
     body {
       background-color: var(--bg-main);
       color: var(--text-main);
       line-height: 1.6;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+
+    section[id] {
+      scroll-margin-top: 88px;
     }
 
     /* Container */
@@ -527,7 +538,7 @@
     .cta-banner p {
       font-size: 17px;
       color: #BFDBFE;
-      max-width: 600px;
+      max-width: 660px;
       margin: 0 auto 32px;
     }
 
