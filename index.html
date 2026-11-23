@@ -139,6 +139,8 @@
       box-shadow: 0 6px 22px rgba(231, 183, 120, 0.32);
     }
 
+    .mobile-contact { display: none; }
+
     /* ---------- Hero ---------- */
     .hero {
       padding: 148px 0 76px;
@@ -550,8 +552,19 @@
     }
 
     .module-head h3 .ico {
-      font-size: 17px;
-      opacity: 0.9;
+      width: 27px;
+      height: 27px;
+      flex: 0 0 auto;
+      border-radius: 8px;
+      background: rgba(231, 183, 120, 0.1);
+      border: 1px solid rgba(231, 183, 120, 0.24);
+      color: var(--gold-light);
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .module-tag {
@@ -1343,6 +1356,12 @@
       .hero h1 { font-size: 35px; letter-spacing: -1.2px; }
       .hero p { font-size: 16px; }
       .nav-links { display: none; }
+      .mobile-contact {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 16px;
+        font-size: 13.5px;
+      }
       .section { padding: 66px 0; }
       .section-title { font-size: 27px; }
       .section-title-wrap { margin-bottom: 36px; }
@@ -1380,8 +1399,8 @@
         <a href="#modules">모듈형 제작</a>
         <a href="#references">레퍼런스</a>
         <a href="#pricing">견적</a>
-        <a href="tel:010-3352-6875" class="btn-contact">제작 문의</a>
       </nav>
+      <a href="tel:010-3352-6875" class="btn-contact mobile-contact">전화 문의</a>
     </div>
   </header>
 
@@ -1462,6 +1481,7 @@
               <li><b>쓰는 곳</b> 송년회, 시상식, 이임식·환송회, 감사 행사</li>
               <li><b>구성</b> 한 해의 장면 → 사람 → 감사 메시지</li>
               <li><b>톤</b> 격식형 / 내부용 따뜻한 톤 중 선택</li>
+              <li><b>제작</b> 실사진 + AI 그래픽·모션그래픽</li>
             </ul>
           </article>
 
@@ -1608,6 +1628,7 @@
             </div>
             <ul class="ai-points">
               <li>성과·시상식·한 해 돌아보기 등 콘셉트를 5종까지 먼저 제안</li>
+              <li>감사영상·시상식의 ‘한 해 돌아보기’ 장면을 AI 그래픽으로 제작</li>
               <li>배경·제품 컷·그래픽 소재를 AI로 제작해 촬영 항목을 줄임</li>
               <li>확정된 콘셉트만 본 제작으로 넘겨 재작업 비용을 줄임</li>
               <li>AI로 만든 장면과 촬영 장면을 구분해 구성안에 표시</li>
@@ -1643,6 +1664,7 @@
               <h4>모듈 샘플 · 타이포그래픽과 모션그래픽</h4>
               <p>실제 모듈 작업물의 움직임을 그대로 옮긴 GIF입니다.</p>
             </div>
+            <!-- GIF 추가: assets/ 에 파일을 올리고 아래 gif-item 한 칸을 복제해 img src만 바꾸면 됩니다. -->
             <div class="gif-strip">
               <div class="gif-item">
                 <img src="assets/sample-typo.gif" alt="타이포그래픽 로어써드 샘플" loading="lazy">
@@ -1741,7 +1763,7 @@
               </div>
               <div class="ref-body">
                 <h4>KIAT 한국산업기술진흥원 정재훈 원장님 이임식</h4>
-                <p>한 사람의 재임 기간과 업적을 동료들의 목소리로 정리한 감사·이임 영상입니다.</p>
+                <p>이임식 현장을 기록한 인물 영상 작업 사례입니다. 환송·감사 자리에서 쓰는 톤을 참고하실 수 있습니다.</p>
                 <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
