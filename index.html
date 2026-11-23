@@ -254,34 +254,66 @@
       border-color: #364050;
     }
 
-    .trust-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 26px 0;
-      border-top: 1px solid var(--line-soft);
-      border-bottom: 1px solid var(--line-soft);
+    .hero-intro {
+      position: relative;
+      max-width: 880px;
+      margin: 42px auto 0;
+      aspect-ratio: 16 / 9;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #0B0D12;
+      border: 1px solid rgba(231, 183, 120, 0.24);
+      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.5);
     }
 
-    .stat-item h3 {
-      font-size: 27px;
-      font-weight: 800;
-      letter-spacing: -0.6px;
-      margin-bottom: 3px;
+    .hero-intro video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
-    .stat-item h3 span {
-      color: var(--gold);
-      font-size: 17px;
-      margin-left: 1px;
+    .hero-intro::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10, 11, 15, 0) 52%, rgba(10, 11, 15, 0.62) 100%);
+      pointer-events: none;
     }
 
-    .stat-item p {
-      font-size: 13.5px;
+    .hero-intro-badge {
+      position: absolute;
+      left: 16px;
+      bottom: 15px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 13px;
+      border-radius: 9999px;
+      background: rgba(10, 11, 15, 0.6);
+      border: 1px solid rgba(231, 183, 120, 0.32);
+      backdrop-filter: blur(6px);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      color: var(--gold-light);
+    }
+
+    .hero-intro-badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 8px var(--gold);
+    }
+
+    .hero p.hero-intro-caption {
+      max-width: 880px;
+      margin: 14px auto 0;
+      font-size: 12.5px;
+      line-height: 1.6;
       color: var(--muted-2);
-      margin: 0;
     }
 
     /* ---------- Shared section ---------- */
@@ -591,6 +623,36 @@
       line-height: 1.6;
     }
 
+    .module-media {
+      position: relative;
+      margin: -26px -24px 18px;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 13px 13px 0 0;
+      background: #0A0C11;
+    }
+
+    .module-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .module-media .sample-tag {
+      position: absolute;
+      right: 9px;
+      bottom: 9px;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      color: rgba(255, 255, 255, 0.86);
+      background: rgba(10, 11, 15, 0.58);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 5px;
+      padding: 2px 7px;
+    }
+
     .ai-block {
       margin-top: 26px;
       border: 1px solid rgba(231, 183, 120, 0.24);
@@ -677,63 +739,6 @@
       color: var(--muted-2);
       margin-top: 12px;
       text-align: right;
-    }
-
-    .gif-block {
-      margin-top: 34px;
-      border-top: 1px solid var(--line-soft);
-      padding-top: 30px;
-    }
-
-    .gif-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 16px;
-    }
-
-    .gif-head h4 {
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: -0.3px;
-    }
-
-    .gif-head p {
-      font-size: 12.5px;
-      color: var(--muted-2);
-    }
-
-    .gif-strip {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .gif-item {
-      background: linear-gradient(160deg, #F2EEE6 0%, #E5DFD3 100%);
-      border: 1px solid #D7D1C4;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .gif-item img {
-      width: 100%;
-      height: 152px;
-      object-fit: contain;
-      display: block;
-      padding: 12px 14px 8px;
-    }
-
-    .gif-item p {
-      font-size: 12px;
-      font-weight: 600;
-      color: #4B463C;
-      background: rgba(255, 255, 255, 0.35);
-      padding: 9px 12px;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      text-align: center;
     }
 
     /* ---------- References ---------- */
@@ -1335,8 +1340,6 @@
       .concept-strip { grid-template-columns: repeat(3, 1fr); }
       .price-layout { grid-template-columns: 1fr; }
       .high-involve { grid-template-columns: 1fr; }
-      .gif-strip { grid-template-columns: 1fr; }
-      .gif-item img { height: 190px; }
       .client-list { grid-template-columns: 1fr; }
     }
 
@@ -1354,8 +1357,9 @@
       .section { padding: 66px 0; }
       .section-title { font-size: 27px; }
       .section-title-wrap { margin-bottom: 36px; }
-      .trust-stats { grid-template-columns: repeat(2, 1fr); gap: 18px 12px; }
-      .stat-item h3 { font-size: 23px; }
+      .hero-intro { margin-top: 30px; border-radius: 14px; }
+      .hero-intro-badge { left: 11px; bottom: 11px; font-size: 11px; padding: 5px 11px; }
+      .hero p.hero-intro-caption { font-size: 12px; }
       .format-bar { height: 44px; }
       .format-bar div { font-size: 10.5px; }
       .module-grid { grid-template-columns: 1fr; }
@@ -1416,24 +1420,16 @@
           <a href="tel:010-3352-6875" class="btn-sub">010-3352-6875 직통 상담</a>
         </div>
 
-        <div class="trust-stats">
-          <div class="stat-item">
-            <h3>15<span>년+</span></h3>
-            <p>현장 기획·제작 업력</p>
-          </div>
-          <div class="stat-item">
-            <h3>73<span>편</span></h3>
-            <p>유튜브 공개 작업물</p>
-          </div>
-          <div class="stat-item">
-            <h3>100<span>%</span></h3>
-            <p>외주 없는 직영 제작</p>
-          </div>
-          <div class="stat-item">
-            <h3>3<span>회</span></h3>
-            <p>수정 기본 포함</p>
-          </div>
+        <!-- 인트로 영상: 손손 PC의 intro_five_concepts_31s.mp4(31초, 14MB)를 올릴 때 assets/intro-reel.mp4 파일만 교체하면 됩니다. -->
+        <div class="hero-intro">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/intro-reel-poster.jpg" aria-label="성과보고·한 해 돌아보기·시상식·인물·리더십·연구·기술 다섯 가지 AI 콘셉트 인트로">
+            <source src="assets/intro-reel.mp4" type="video/mp4">
+          </video>
+          <span class="hero-intro-badge"><span class="dot"></span>AI 콘셉트 인트로</span>
         </div>
+        <p class="hero-intro-caption">
+          성과보고 · 한 해 돌아보기 · 시상식 · 인물·리더십 · 연구·기술 — 다섯 가지 콘셉트를 짧은 인트로로 먼저 보여드립니다.
+        </p>
       </div>
     </section>
 
@@ -1558,6 +1554,12 @@
 
         <div class="module-grid">
           <article class="module-card">
+            <div class="module-media">
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/module-typo.jpg" aria-label="타이포그래픽 모듈 샘플 영상">
+                <source src="assets/module-typo.mp4" type="video/mp4">
+              </video>
+              <span class="sample-tag">SAMPLE</span>
+            </div>
             <div class="module-head">
               <h3><span class="ico">가</span> 타이포그래픽</h3>
               <span class="module-tag base">기본 포함</span>
@@ -1566,6 +1568,12 @@
           </article>
 
           <article class="module-card">
+            <div class="module-media">
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/module-motion.jpg" aria-label="모션그래픽 모듈 샘플 영상">
+                <source src="assets/module-motion.mp4" type="video/mp4">
+              </video>
+              <span class="sample-tag">SAMPLE</span>
+            </div>
             <div class="module-head">
               <h3><span class="ico">움</span> 모션그래픽</h3>
               <span class="module-tag base">기본 포함</span>
@@ -1574,6 +1582,12 @@
           </article>
 
           <article class="module-card">
+            <div class="module-media">
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/module-3d.jpg" aria-label="3D 제작 모듈 샘플 영상">
+                <source src="assets/module-3d.mp4" type="video/mp4">
+              </video>
+              <span class="sample-tag">SAMPLE</span>
+            </div>
             <div class="module-head">
               <h3><span class="ico">3D</span> 3D 제작</h3>
               <span class="module-tag">선택 · 별도 견적</span>
@@ -1582,6 +1596,12 @@
           </article>
 
           <article class="module-card">
+            <div class="module-media">
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/module-field.jpg" aria-label="현장 촬영 모듈 샘플 영상">
+                <source src="assets/module-field.mp4" type="video/mp4">
+              </video>
+              <span class="sample-tag">SAMPLE</span>
+            </div>
             <div class="module-head">
               <h3><span class="ico">현</span> 현장 촬영</h3>
               <span class="module-tag">선택 · 비용 추가</span>
@@ -1590,6 +1610,12 @@
           </article>
 
           <article class="module-card">
+            <div class="module-media">
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/module-interview.jpg" aria-label="인터뷰 촬영 모듈 샘플 영상">
+                <source src="assets/module-interview.mp4" type="video/mp4">
+              </video>
+              <span class="sample-tag">SAMPLE</span>
+            </div>
             <div class="module-head">
               <h3><span class="ico">인</span> 인터뷰 촬영</h3>
               <span class="module-tag">선택 · 비용 추가</span>
@@ -1598,6 +1624,12 @@
           </article>
 
           <article class="module-card ai">
+            <div class="module-media">
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/module-ai.jpg" aria-label="AI 제작 모듈 샘플 영상">
+                <source src="assets/module-ai.mp4" type="video/mp4">
+              </video>
+              <span class="sample-tag">SAMPLE</span>
+            </div>
             <div class="module-head">
               <h3><span class="ico">AI</span> AI 제작</h3>
               <span class="module-tag base">기본 활용</span>
@@ -1648,28 +1680,6 @@
             </figure>
           </div>
           <p class="strip-caption">제작 전 단계에서 AI로 만든 콘셉트 예시입니다. 실제 납품물은 확정된 콘셉트로 제작합니다.</p>
-
-          <div class="gif-block">
-            <div class="gif-head">
-              <h4>모듈 샘플 · 타이포그래픽과 모션그래픽</h4>
-              <p>실제 모듈 작업물의 움직임을 그대로 옮긴 GIF입니다.</p>
-            </div>
-            <!-- GIF 추가: assets/ 에 파일을 올리고 아래 gif-item 한 칸을 복제해 img src만 바꾸면 됩니다. -->
-            <div class="gif-strip">
-              <div class="gif-item">
-                <img src="assets/sample-typo.gif" alt="타이포그래픽 로어써드 샘플" loading="lazy">
-                <p>타이포그래픽 · 로어써드</p>
-              </div>
-              <div class="gif-item">
-                <img src="assets/sample-motion-a.gif" alt="모션그래픽 키네틱 타이포 샘플" loading="lazy">
-                <p>모션그래픽 · 키네틱 타이포</p>
-              </div>
-              <div class="gif-item">
-                <img src="assets/sample-motion-b.gif" alt="모션그래픽 일러스트 샘플" loading="lazy">
-                <p>모션그래픽 · 일러스트 모션</p>
-              </div>
-            </div>
-          </div>
         </div>
 
         <p class="under-note">
@@ -2062,6 +2072,26 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // 움직이는 샘플은 화면에 보일 때만 재생해 모바일 배터리와 데이터를 아낍니다.
+    (function () {
+      var vids = document.querySelectorAll('video[autoplay]');
+      if (!('IntersectionObserver' in window)) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var v = entry.target;
+          if (entry.isIntersecting) {
+            var p = v.play();
+            if (p && p.catch) p.catch(function () {});
+          } else {
+            v.pause();
+          }
+        });
+      }, { rootMargin: '160px 0px', threshold: 0.15 });
+      Array.prototype.forEach.call(vids, function (v) { io.observe(v); });
+    })();
+  </script>
 
 </body>
 </html>
