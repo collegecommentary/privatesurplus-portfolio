@@ -1375,7 +1375,472 @@
       .cta-banner h2 { font-size: 24px; }
       .footer-contact-box { text-align: left; }
     }
-    </style>
+
+    /* ================= v5 · 스튜디오 손짓 ================= */
+    .logo .logo-en {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.9px;
+      color: var(--gold-deep);
+      margin-left: 2px;
+      transform: translateY(1px);
+    }
+
+    /* hero */
+    .pill-tag {
+      font-size: 15px;
+      padding: 11px 24px;
+      gap: 9px;
+      letter-spacing: -0.1px;
+      margin-bottom: 28px;
+    }
+
+    .pill-tag .dot { width: 7px; height: 7px; }
+
+    .hero h1 span.highlight {
+      color: #F7E3C2;
+      background: linear-gradient(120deg, #FFF1DA 0%, #F0CB98 48%, #E0B076 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-actions { margin-bottom: 34px; }
+
+    .btn-main svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+      margin-right: 8px;
+      transform: translateY(2px);
+    }
+
+    .hero p.hero-contact-note {
+      font-size: 14px;
+      color: var(--muted-2);
+      margin: -12px auto 46px;
+      letter-spacing: -0.1px;
+    }
+
+    .hero p.hero-contact-note a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(231, 183, 120, 0.35);
+      padding-bottom: 1px;
+    }
+
+    .hero p.hero-contact-note a:hover { color: var(--gold-light); }
+
+    /* targets */
+    .timing-card { padding: 0; overflow: hidden; }
+
+    .timing-media {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #0A0C11;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .timing-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .timing-media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10, 11, 15, 0) 52%, rgba(19, 22, 30, 0.92) 100%);
+      pointer-events: none;
+    }
+
+    .timing-body {
+      padding: 24px 26px 26px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .timing-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .timing-head .badge { margin-bottom: 0; align-self: auto; }
+
+    .timing-head .num {
+      position: static;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.14);
+    }
+
+    .timing-body > p {
+      font-size: 14.2px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    /* modules */
+    .module-head h3 .ico.wide {
+      font-size: 8.5px;
+      letter-spacing: -0.4px;
+    }
+
+    /* references · showreel */
+    .showreel {
+      position: relative;
+      margin-bottom: 54px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(231, 183, 120, 0.26);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.55);
+      background: #0A0C11;
+    }
+
+    .showreel-frame { position: relative; aspect-ratio: 16 / 9; }
+
+    .showreel .facade {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      background: #0A0C11;
+      cursor: pointer;
+      display: block;
+      color: inherit;
+      font-family: inherit;
+    }
+
+    .showreel .facade img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0.92;
+      transition: opacity 0.35s, transform 0.8s;
+    }
+
+    .showreel .facade:hover img { opacity: 1; transform: scale(1.02); }
+
+    .showreel .play-big {
+      position: absolute;
+      left: 50%;
+      top: 47%;
+      transform: translate(-50%, -50%);
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: rgba(10, 11, 15, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45);
+      transition: transform 0.25s, background 0.25s;
+    }
+
+    .showreel .facade:hover .play-big { transform: translate(-50%, -50%) scale(1.06); background: rgba(231, 183, 120, 0.22); }
+
+    .showreel .play-big svg { width: 26px; height: 26px; fill: #fff; margin-left: 5px; }
+
+    .showreel .reel-label {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 46px 26px 22px;
+      background: linear-gradient(0deg, rgba(8, 9, 12, 0.88) 0%, rgba(8, 9, 12, 0) 100%);
+      text-align: left;
+    }
+
+    .showreel .reel-label b {
+      display: block;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #FFF9EF;
+    }
+
+    .showreel .reel-label em {
+      display: block;
+      font-style: normal;
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    .showreel .reel-tag {
+      flex: 0 0 auto;
+      font-size: 11px;
+     	font-weight: 700;
+      letter-spacing: 1.4px;
+      color: var(--gold-light);
+      border: 1px solid rgba(231, 183, 120, 0.34);
+      border-radius: 9999px;
+      padding: 6px 13px;
+      background: rgba(231, 183, 120, 0.1);
+      text-transform: uppercase;
+    }
+
+    .showreel iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* references · rails */
+    .ref-group + .ref-group { margin-top: 42px; }
+
+    .ref-group-head { gap: 12px; }
+
+    .rail-nav {
+      display: flex;
+      gap: 6px;
+      margin-left: 6px;
+    }
+
+    .rail-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+    }
+
+    .rail-btn svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .rail-btn:hover:not(:disabled) {
+      background: rgba(231, 183, 120, 0.16);
+      border-color: rgba(231, 183, 120, 0.48);
+    }
+
+    .rail-btn:disabled { opacity: 0.26; cursor: default; }
+
+    .ref-group.is-static .rail-nav { display: none; }
+
+    .ref-rail {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+    }
+
+    .ref-rail::-webkit-scrollbar { display: none; }
+
+    .ref-rail .ref-card {
+      flex: 0 0 clamp(250px, 31.4%, 372px);
+      scroll-snap-align: start;
+    }
+
+    .ref-rail .ref-card:last-child { margin-right: 2px; }
+
+    /* pricing extras */
+    .price-terms {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .price-terms div {
+      background: rgba(231, 183, 120, 0.055);
+      border: 1px solid rgba(231, 183, 120, 0.22);
+      border-radius: 14px;
+      padding: 20px 22px;
+    }
+
+    .price-terms h4 {
+      font-size: 14.5px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .price-terms h4 .dotg {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex: 0 0 auto;
+    }
+
+    .price-terms p { font-size: 13.4px; color: #C7BFB2; line-height: 1.68; }
+
+    .price-terms p.big { font-size: 15px; color: var(--gold-light); font-weight: 700; }
+
+    /* footer */
+    .footer-info h4 .en {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      color: var(--gold-deep);
+      margin-left: 8px;
+      vertical-align: 2px;
+    }
+
+    .footer-info .biz-line {
+      max-width: 560px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .footer-info .biz-line b { color: #C3CAD6; font-weight: 600; }
+
+    .btn-profile {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      border: 1px solid rgba(231, 183, 120, 0.34);
+      background: rgba(231, 183, 120, 0.08);
+      color: var(--gold-light);
+      font-size: 13.5px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .btn-profile:hover { background: rgba(231, 183, 120, 0.16); border-color: rgba(231, 183, 120, 0.55); }
+
+    .btn-profile svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* modal */
+    .modal[hidden] { display: none; }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      background: rgba(5, 6, 9, 0.74);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .modal-card {
+      width: min(430px, 100%);
+      background: linear-gradient(170deg, #171B24 0%, #101319 100%);
+      border: 1px solid rgba(231, 183, 120, 0.32);
+      border-radius: 18px;
+      padding: 30px 28px 24px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.62);
+    }
+
+    .modal-card h3 {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .modal-card p { font-size: 14px; color: var(--muted); line-height: 1.72; }
+
+    .modal-card p b { color: #E6E0D4; font-weight: 600; }
+
+    .modal-actions { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+
+    .modal-actions a,
+    .modal-actions button {
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+    }
+
+    .modal-actions a {
+      background: linear-gradient(135deg, #F3D6A8, #DCA45F);
+      border-color: transparent;
+      color: #17130C;
+    }
+
+    /* responsive v5 */
+    @media (max-width: 980px) {
+      .ref-rail .ref-card { flex: 0 0 46%; }
+      .price-terms { grid-template-columns: 1fr; }
+      .showreel .reel-label b { font-size: 17px; }
+    }
+
+    @media (max-width: 760px) {
+      .pill-tag { font-size: 13.4px; padding: 9px 15px; gap: 7px; line-height: 1.5; text-align: left; }
+      .hero h1 { font-size: 34px; }
+      .hero h1 span.highlight {
+        background: none;
+        -webkit-text-fill-color: #F7E3C2;
+        color: #F7E3C2;
+        text-shadow: 0 0 22px rgba(231, 183, 120, 0.3);
+      }
+      .hero p.hero-contact-note { font-size: 12.8px; margin: -8px auto 34px; }
+      .timing-body { padding: 20px 20px 22px; }
+      .ref-rail .ref-card { flex: 0 0 84%; }
+      .ref-group-head h3 { font-size: 16.5px; }
+      .rail-btn { width: 30px; height: 30px; }
+      .showreel .play-big { width: 62px; height: 62px; }
+      .showreel .play-big svg { width: 19px; height: 19px; }
+      .showreel .reel-label { padding: 34px 16px 15px; }
+      .showreel .reel-label b { font-size: 15.5px; }
+      .showreel .reel-label em { font-size: 11.5px; }
+      .showreel .reel-tag { display: none; }
+      .btn-profile { width: 100%; justify-content: center; }
+    }
+  </style>
 </head>
 <body>
 
@@ -1746,7 +2211,7 @@
               <div class="ref-body">
                 <h4>언리얼로 만든 결과보고·성과보고 영상</h4>
                 <p>3D 공간과 데이터를 엮어, 1분 안에 성과를 먼저 보여주는 두괄식 구성의 기준이 된 작업입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=lX-56hBxyws" target="_blank" rel="noopener">
@@ -1758,7 +2223,7 @@
               <div class="ref-body">
                 <h4>서울대학교 공헌단 케냐 봉사단</h4>
                 <p>현장에서 촬영한 기록을 그대로 살려 활동의 의미를 전달한 장편 결과보고 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=b9pmifeYKP0" target="_blank" rel="noopener">
@@ -1770,7 +2235,7 @@
               <div class="ref-body">
                 <h4>KF 한국청년대표단</h4>
                 <p>공공외교 사업의 과정과 성과를 15분 장편으로 정리한 기록 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=JtTaOOaqp_g" target="_blank" rel="noopener">
@@ -1782,7 +2247,7 @@
               <div class="ref-body">
                 <h4>MLB 수지 LA다저스 시구</h4>
                 <p>브랜드 행사와 현장의 순간을 빠르게 정리한 이벤트 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=ND2aG4ASlOQ" target="_blank" rel="noopener">
@@ -1794,7 +2259,7 @@
               <div class="ref-body">
                 <h4>과학기술문화 콘텐츠 아이디어 해커톤</h4>
                 <p>행사 하이라이트와 결과를 짧게 압축한 최근 작업입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=yDhblg9CTnQ" target="_blank" rel="noopener">
@@ -1806,7 +2271,7 @@
               <div class="ref-body">
                 <h4>크린에너지센터</h4>
                 <p>시설과 사업 구조를 차분하게 설명하는 기관 기록 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
           </div>
@@ -1835,7 +2300,7 @@
               <div class="ref-body">
                 <h4>KIAT 한국산업기술진흥원 정재훈 원장님 이임식</h4>
                 <p>이임식 현장과 함께한 사람들의 인사를 담은 인물 기록 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=EamGXQKWS-U" target="_blank" rel="noopener">
@@ -1847,7 +2312,7 @@
               <div class="ref-body">
                 <h4>416재단 창립영상</h4>
                 <p>기관이 출발하는 순간의 의미와 배경을 담담하게 기록한 창립 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=SkiQhRVCYdI" target="_blank" rel="noopener">
@@ -1859,7 +2324,7 @@
               <div class="ref-body">
                 <h4>김대진 총장님</h4>
                 <p>한 사람의 업적과 주변의 이야기로 구성한 인물 헌정 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=pUdPW-vRM4g" target="_blank" rel="noopener">
@@ -1871,7 +2336,7 @@
               <div class="ref-body">
                 <h4>하남시의회</h4>
                 <p>기관의 메시지를 18초로 압축한 아이덴티티 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
           </div>
@@ -1900,7 +2365,7 @@
               <div class="ref-body">
                 <h4>한국의집 — 브랜드 아이덴티티 변경</h4>
                 <p>BI 변경을 알리는 56초 오프닝. 공간과 로고 모션을 함께 설계했습니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=zilXkpPoipU" target="_blank" rel="noopener">
@@ -1912,7 +2377,7 @@
               <div class="ref-body">
                 <h4>언리얼 메타휴먼 프레젠테이션</h4>
                 <p>사람 대신 가상 인물이 발표하는 형식. 인터뷰 촬영 없이도 인물 장면을 만드는 3D 작업입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=Jwh5VhyRd48" target="_blank" rel="noopener">
@@ -1924,7 +2389,7 @@
               <div class="ref-body">
                 <h4>미래숲 언리얼 — 사막을 숲으로</h4>
                 <p>사업의 결과를 3D 공간으로 재현해 보여준 사례. 사진과 수치만으로는 어려운 장면을 채웁니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=pf7MOfz1Qo8" target="_blank" rel="noopener">
@@ -1936,7 +2401,7 @@
               <div class="ref-body">
                 <h4>스타벅스 언리얼 월드 만들기</h4>
                 <p>브랜드 공간을 3D로 먼저 지어 보여주는 제작 과정 테스트입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=KFE-GaL3e8Y" target="_blank" rel="noopener">
@@ -1948,7 +2413,7 @@
               <div class="ref-body">
                 <h4>브릴리언트 키즈모터쇼 홍보 30초</h4>
                 <p>모션그래픽 중심으로 30초 안에 행사 정보를 전달하는 홍보 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=Ncv7jgJ2BIg" target="_blank" rel="noopener">
@@ -1960,7 +2425,7 @@
               <div class="ref-body">
                 <h4>프레젠테이션의 새로운 변화</h4>
                 <p>기술로 말하는 브랜드 선언형 영상. 발표 자료를 영상으로 바꾼 사례입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
           </div>
@@ -1989,7 +2454,7 @@
               <div class="ref-body">
                 <h4>신세계 — 크리스마스 메이킹</h4>
                 <p>시즌 캠페인의 제작 과정을 브랜드 톤 그대로 담은 메이킹 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=_VkqW86GejU" target="_blank" rel="noopener">
@@ -2001,7 +2466,7 @@
               <div class="ref-body">
                 <h4>삼성생명 — 교육자료</h4>
                 <p>보험 상품을 인포그래픽으로 풀어낸 대기업 교육 콘텐츠입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=aCCmATgAojE" target="_blank" rel="noopener">
@@ -2013,7 +2478,7 @@
               <div class="ref-body">
                 <h4>기아 레드멤버스 — 카리모델링 시즌5</h4>
                 <p>시리즈로 이어온 브랜드 콘텐츠. 현장의 반응을 그대로 살렸습니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=SF1d0xuK6pc" target="_blank" rel="noopener">
@@ -2025,7 +2490,7 @@
               <div class="ref-body">
                 <h4>선진 — 원피딩 500</h4>
                 <p>제품의 핵심을 1분에 정리한 광고형 영상. 2017년부터 이어진 거래처 작업입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=rzMy3jI8kaQ" target="_blank" rel="noopener">
@@ -2037,7 +2502,7 @@
               <div class="ref-body">
                 <h4>선진 — 인도 진출 영상</h4>
                 <p>해외 진출이라는 사업의 전환점을 기록한 기업 스토리 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=VErkKOVmIho" target="_blank" rel="noopener">
@@ -2049,7 +2514,7 @@
               <div class="ref-body">
                 <h4>하림 선진</h4>
                 <p>그룹 협업 과업으로 진행한 기업 소개 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=khapwE7UkRE" target="_blank" rel="noopener">
@@ -2061,7 +2526,7 @@
               <div class="ref-body">
                 <h4>네이버 오디오클립 — 이제훈</h4>
                 <p>셀럽과 함께 만든 브랜드 콘텐츠. 한 편의 영상으로 채널을 소개합니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=ha-0S7k5zN8" target="_blank" rel="noopener">
@@ -2073,7 +2538,7 @@
               <div class="ref-body">
                 <h4>네이버 오디오클립 — 우주소녀</h4>
                 <p>같은 시리즈로 제작한 아티스트 편입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=kLVH1UfWsYY" target="_blank" rel="noopener">
@@ -2085,7 +2550,7 @@
               <div class="ref-body">
                 <h4>네이버 오디오클립 — 앤디워홀 × 엑소 카이</h4>
                 <p>전시와 아티스트를 연결한 축하 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
           </div>
@@ -2114,7 +2579,7 @@
               <div class="ref-body">
                 <h4>포스코 — 두드림 프로젝트</h4>
                 <p>CSR 사업의 과정과 결과를 장편으로 기록한 결과보고 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=bMUEbOAJ5P0" target="_blank" rel="noopener">
@@ -2126,7 +2591,7 @@
               <div class="ref-body">
                 <h4>유니세프 — 몽골</h4>
                 <p>현장의 사람과 목소리로 후원의 의미를 전하는 캠페인 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=kdnUnDS5FPk" target="_blank" rel="noopener">
@@ -2138,7 +2603,7 @@
               <div class="ref-body">
                 <h4>유니세프 — 라오스 후원자 현장방문</h4>
                 <p>후원자가 직접 현장을 찾은 날을 기록한 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=eaDEzj-zq-A" target="_blank" rel="noopener">
@@ -2150,7 +2615,7 @@
               <div class="ref-body">
                 <h4>포스코 — 상상이상 사이언스</h4>
                 <p>과학 인재 육성 사업을 소개하는 CSR 콘텐츠입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=PAwp6J5Heug" target="_blank" rel="noopener">
@@ -2162,7 +2627,7 @@
               <div class="ref-body">
                 <h4>미래숲</h4>
                 <p>사막화 방지 사업을 기록한 NGO 협업 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=U7fM3omEXG8" target="_blank" rel="noopener">
@@ -2174,7 +2639,7 @@
               <div class="ref-body">
                 <h4>내가 살고 싶은 도시, 스마트시티</h4>
                 <p>정책과 비전을 시민의 언어로 풀어낸 공공 캠페인입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=PM-WuBXwV9w" target="_blank" rel="noopener">
@@ -2186,7 +2651,7 @@
               <div class="ref-body">
                 <h4>City of Love — Seoullo7017</h4>
                 <p>도시 공간을 21초로 소개한 캠페인 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
           </div>
@@ -2215,7 +2680,7 @@
               <div class="ref-body">
                 <h4>태양단의 비밀 — 전주</h4>
                 <p>드라마 오프닝을 위한 서사형 전주 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=3XzAeIUT5gE" target="_blank" rel="noopener">
@@ -2227,7 +2692,7 @@
               <div class="ref-body">
                 <h4>점순이 — 프롤로그</h4>
                 <p>인물 중심의 짧은 프롤로그. 감정선을 48초에 담았습니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=_kfsebpbQts" target="_blank" rel="noopener">
@@ -2239,7 +2704,7 @@
               <div class="ref-body">
                 <h4>Girl with a Black Spot — Trailer</h4>
                 <p>장편 작업의 트레일러. 장면의 리듬으로 이야기를 예고합니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
             <a class="ref-card" href="https://www.youtube.com/watch?v=9LaYem1BFMg" target="_blank" rel="noopener">
@@ -2251,7 +2716,7 @@
               <div class="ref-body">
                 <h4>젬베의 시대</h4>
                 <p>음악과 인물을 엮은 다큐멘터리형 영상입니다.</p>
-                <span class="yt">YouTube · 썸네일스</span>
+                <span class="yt">YouTube · 썰플러스</span>
               </div>
             </a>
           </div>
