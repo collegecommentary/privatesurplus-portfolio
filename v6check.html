@@ -16,10 +16,12 @@
   var w = parseInt(p.get('w') || '1440', 10);
   var h = parseInt(p.get('h') || '4000', 10);
   var hash = p.get('h2') || '';
+  var y = parseInt(p.get('y') || '0', 10);
   var f = document.createElement('iframe');
   f.width = w; f.height = h;
+  f.style.marginTop = (-y) + 'px';
   f.src = '/' + (hash ? '#' + hash : '');
-  document.getElementById('w').textContent = 'v6check ' + w + 'x' + h + ' ' + hash;
+  document.getElementById('w').textContent = 'v6check ' + w + 'x' + h + ' ' + hash + ' y' + y;
   document.body.appendChild(f);
 </script>
 </body>
