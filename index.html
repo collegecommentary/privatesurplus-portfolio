@@ -1757,6 +1757,7 @@
       font-weight: 700;
       font-family: inherit;
       cursor: pointer;
+      text-decoration: none;
       transition: background 0.2s, border-color 0.2s;
     }
 
@@ -3199,10 +3200,10 @@
           서울시 마포구 양화로 6길 102 4층<br>
           연말 성과보고·감사·시상식 영상<span class="dotsep">·</span>신년 출범 영상<span class="dotsep">·</span>1분 모듈형 제작
         </p>
-        <button type="button" class="btn-profile" id="openProfile">
+        <a class="btn-profile" href="assets/studio_sonjit_company_profile.pdf" download="스튜디오손짓_회사소개서_2026.pdf" type="application/pdf">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14"/></svg>
           회사소개서 다운로드
-        </button>
+        </a>
       </div>
       <div class="footer-contact-box">
         <p><span class="strong">Direct Contact</span></p>
@@ -3212,18 +3213,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- 회사소개서 안내 -->
-  <div class="modal" id="profileModal" hidden>
-    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle">
-      <h3 id="profileModalTitle">회사소개서</h3>
-      <p>최신 회사소개서 PDF가 곧 업데이트됩니다. 급하신 경우 <b>hello@sonjit.kr</b>로 요청해 주세요.</p>
-      <div class="modal-actions">
-        <a href="mailto:hello@sonjit.kr?subject=%5B%EC%9E%90%EB%A3%8C%20%EC%9A%94%EC%B2%AD%5D%20%ED%9A%8C%EC%82%AC%EC%86%8C%EA%B0%9C%EC%84%9C">이메일로 요청</a>
-        <button type="button" data-close>닫기</button>
-      </div>
-    </div>
-  </div>
 
   <script>
     // 움직이는 샘플은 화면에 보일 때만 재생해 모바일 배터리와 데이터를 아낍니다.
@@ -3276,33 +3265,6 @@
       if (!facade || !frame) return;
       facade.addEventListener('click', function () {
         frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/FOathAWKG7U?autoplay=1&rel=0&modestbranding=1" title="스튜디오 손짓 포트폴리오 쇼릴" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
-      });
-    })();
-
-    // 회사소개서 안내 모달
-    (function () {
-      var modal = document.getElementById('profileModal');
-      var open = document.getElementById('openProfile');
-      if (!modal || !open) return;
-      var lastFocus = null;
-      function show() {
-        lastFocus = document.activeElement;
-        modal.hidden = false;
-        document.body.style.overflow = 'hidden';
-        var btn = modal.querySelector('[data-close]');
-        if (btn) btn.focus();
-      }
-      function hide() {
-        modal.hidden = true;
-        document.body.style.overflow = '';
-        if (lastFocus && lastFocus.focus) lastFocus.focus();
-      }
-      open.addEventListener('click', show);
-      modal.addEventListener('click', function (e) {
-        if (e.target === modal || (e.target.closest && e.target.closest('[data-close]'))) hide();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && !modal.hidden) hide();
       });
     })();
   </script>
